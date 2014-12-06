@@ -111,6 +111,8 @@ int main() {
         }
     }
     source->PushBack(3785344415);
+    int startPosition = source->Size;
+    
     TVector<int>* lengthes = new TVector<int>();
     int count = 0;
     while (cin.getline(str, 2048)) {
@@ -130,9 +132,7 @@ int main() {
                 break;
             }
         }
-
-            lengthes->PushBack(curLength);
-        
+        lengthes->PushBack(curLength);
     }
     TVector<int>* positions = new TVector<int>(max(lengthes->Size+1, 1)); // массив позиций начал строк
     if (lengthes->Size >= 2) {
